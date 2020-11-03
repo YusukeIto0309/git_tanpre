@@ -10,11 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_26_203247) do
+ActiveRecord::Schema.define(version: 2020_11_03_211047) do
 
   create_table "tweets", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name"
     t.string "title"
-    t.binary "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
