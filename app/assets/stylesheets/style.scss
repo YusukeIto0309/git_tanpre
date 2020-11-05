@@ -34,6 +34,59 @@ line-height: 1.57;
   letter-spacing: 0.02em;
   font-size: 16px;
   color: $dark;
-  font-family: 'Unica One', "Avenir", "游ゴシック", "YuGothic", "ヒラギノ角ゴ Pro W6", "HIragino Kaku Gothic Pro W6", "HIragino Kaku Gothic Pro", Osaka, Meiryo, "メ��リオ", "ＭＳ Ｐゴシック", "MS P Gothic", sans-serif;
   margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: $dark;
+}
+
+.btn {
+    @include basePadding(8px 20px);
+    font-size: 14px;
+    color: $dark;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+  &:hover {
+    border-color: lighten($accent, 15%);
+    color: lighten($accent, 15%);
+  }
+}
+
+
+
+
+header.header {
+  @include basePadding;
+  border-bottom: 1px solid $gray;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  
+  div.header__bar.row {
+    position: relative; 
+    h1.grid-6 {
+      font-size: 20px;
+      line-height: 41px;
+      float: left;
+      a {
+        display: block;
+      }
+    }
+    div.grid-6 {
+      float: right;
+      text-aligin: right;
+      a.post {
+        @extend .btn;
+        width: 120;
+        display: inline-left;
+        margin-left: 10px;
+      }
+    }
+  }
 }
