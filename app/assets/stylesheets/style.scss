@@ -37,6 +37,10 @@ line-height: 1.57;
   margin: 0;
 }
 
+span{
+  display:block;
+}
+
 a {
   text-decoration: none;
   color: $dark;
@@ -59,7 +63,7 @@ a {
 
 
 header.header {
-  @include basePadding;
+  @include basePadding($padding: 10px 260px 10px 260px) ;
   border-bottom: 1px solid $gray;
   background-color: #fff;
   position: fixed;
@@ -88,5 +92,22 @@ header.header {
         margin-left: 10px;
       }
     }
+  }
+}
+
+
+div.contents.row {
+  @include boxBase(20px 250px 30px 250px);
+  h2 {
+    @include boxBase(20px 0, 0);
+  }
+  div.content_post {
+    @include boxBase(5px 0 50px);
+    position: relative;
+    height: 600px;
+    color: #fff;
+    background-size: cover;
+    background-position: center center;
+    
   }
 }
