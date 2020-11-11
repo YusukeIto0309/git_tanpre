@@ -11,7 +11,7 @@ class TweetsController < ApplicationController
       Tweet.create(tweet_params)
     end
     
-    private
+    private #tweetsコントローラ以外のファイルからメソッドを呼び出すことを防ぐ
     def tweet_params
       params.permit(:name, :image)
     end
