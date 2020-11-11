@@ -13,7 +13,7 @@ class TweetsController < ApplicationController
     
     private #tweetsコントローラ以外のファイルからメソッドを呼び出すことを防ぐ
     def tweet_params
-      params.permit(:name, :image)
+      params.permit(:name, :title, :image)
     end
     
 end
