@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
 
-  root 'tweets#index'
+  root to: 'top#index'
 
   get 'tweets'        => 'tweets#index'
   
