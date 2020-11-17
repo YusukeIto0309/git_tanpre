@@ -12,7 +12,12 @@
   </head>
 
   <body>
-    <%= render partial: 'common/header' %>
+    <header class="header">
+      <div class="header__bar row">
+        <h1 class="grid-6"><a href="/">Tanpre</a></h1>
+        <%= render partial: 'common/header' %>
+      </div>
+    </header>
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
       <%= yield %>
